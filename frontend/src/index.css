@@ -1,13 +1,73 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+div {
+  font-size: 20px;
+}
+h1 {
+  margin-left: 10px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+  height: 500px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.grid-item {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.search-box {
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+  /* For tablets: */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    height: 500px;
+  }
+  .grid-item {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px;
+    height: 500px;
+  }
+  .grid-item {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
 }
